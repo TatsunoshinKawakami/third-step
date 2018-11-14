@@ -3,7 +3,7 @@
 #include<stdlib.h>
 
 int desc(const void *a, const void *b){
-	return *(int *)b - *(int *)a;
+	return *(double *)b - *(double *)a;
 }
 
 int main(){
@@ -28,8 +28,8 @@ int main(){
 	hyoujun_sci = sqrt(hyoujun_sci/20.0);
 	hyoujun_eng = sqrt(hyoujun_eng/20.0);
 	
-	qsort(eng, 20, sizeof(int), desc);
-	qsort(eng, 20, sizeof(int), desc);
+	qsort(sci, 20, sizeof(double), desc);
+	qsort(eng, 20, sizeof(double), desc);
 	
 	printf("理科\n");
 	printf("平均点：%f, 標準偏差：%f, 合計点：%f\n", ave_sci, hyoujun_sci, sum_sci);
